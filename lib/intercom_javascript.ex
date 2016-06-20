@@ -31,7 +31,7 @@ defmodule IntercomJavascript do
 
     case secret do
       nil -> opts
-      s -> Map.merge(opts, %{:user_hash => :sha256
+      _ -> Map.merge(opts, %{:user_hash => :sha256
         |> :crypto.hmac(secret, Map.fetch!(opts, key))
         |> Base.encode16
         |> String.downcase
