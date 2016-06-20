@@ -4,10 +4,7 @@ defmodule Intercom do
 
   def to_javascript_object(dict) when is_map(dict) do
     props = Enum.map(dict, fn {k, v} ->
-      Builder.property(
-        Builder.identifier(k),
-        Builder.literal(v)
-      )
+      k |> Builder.identifier |> Builder.property(Builder.literal(v))
     end)
     Builder.object_expression(props)
   end
