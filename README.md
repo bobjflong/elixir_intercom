@@ -1,4 +1,4 @@
-# Generating the Intercom snippet
+# Intercom snippet
 
 Intercom can be installed in your web app to help you chat to logged-in and logged-out users.
 
@@ -39,7 +39,7 @@ defmodule HelloPhoenix.PageController do
 end
 ```
 
-# Using the Intercom REST API:
+# Intercom REST API:
 
 
 The Intercom [REST API](https://developers.intercom.io/) provides full access to Intercom resources. This library provides a thin wrapper over [httpoison](https://github.com/edgurgel/httpoison):
