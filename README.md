@@ -1,17 +1,21 @@
 # Generating the Intercom snippet
 
-[More info](https://docs.intercom.io/configure-intercom-for-your-product-or-site/customize-the-intercom-messenger/the-intercom-javascript-api).
+Intercom can be installed in your web app to help you chat to logged-in and logged-out users.
+
+[Full configuration options can be found here](https://docs.intercom.io/configure-intercom-for-your-product-or-site/customize-the-intercom-messenger/the-intercom-javascript-api).
 
 ```elixir
+require Intercom
+
 # Generate the full Intercom snippet
 Intercom.snippet(
-  "<your app id>",
-  "<your secret key>",
-  %{email: "your_data@example.com"}
+  "<your app id>", # Your app's identifier.
+  "<your secret key>", # Your app's secret key. This enables secure mode https://docs.intercom.io/configure-intercom-for-your-product-or-site/staying-secure/enable-secure-mode-on-your-web-product
+  %{email: "your_data@example.com"} # Key value pairs identifying your user.
 )
 ```
 
-Using the Phoenix web framework:
+For example, this shows how to generate the web snippet in a [Phoenix](http://www.phoenixframework.org/) web app:
 
 ```elixir
 defmodule HelloPhoenix.PageController do
@@ -37,9 +41,12 @@ end
 
 # Using the Intercom REST API:
 
-[More info](https://developers.intercom.io/).
+
+The Intercom [REST API](https://developers.intercom.io/) provides full access to Intercom resources. This library provides a thin wrapper over [httpoison](https://github.com/edgurgel/httpoison):
 
 ```elixir
+require Intercom.Client
+
 Intercom.Client.start
 
 Intercom.Client.get!(
