@@ -40,6 +40,8 @@ end
 [More info](https://developers.intercom.io/).
 
 ```elixir
+Intercom.Client.start
+
 Intercom.Client.get!(
   "/users",
   [],
