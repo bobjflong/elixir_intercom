@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/bobjflong/elixir_intercom.svg?branch=master)](https://travis-ci.org/bobjflong/elixir_intercom)
+
 # Intercom snippet
 
 Intercom can be installed in your web app to help you chat to logged-in and logged-out users.
