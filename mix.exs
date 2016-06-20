@@ -1,8 +1,8 @@
-defmodule IntercomJavascript.Mixfile do
+defmodule Intercom.Mixfile do
   use Mix.Project
 
   def project do
-    [app: :intercom_javascript,
+    [app: :intercom,
      version: "0.0.1",
      elixir: "~> 1.2",
      build_embedded: Mix.env == :prod,
@@ -27,6 +27,7 @@ defmodule IntercomJavascript.Mixfile do
   #
   # Type "mix help deps" for more examples and options
   defp deps do
-    [{:estree, "~> 2.3"}]
+    [{:estree, "~> 2.3"},
+     {:httpoison, "~> 0.8.0"}]
   end
 end
