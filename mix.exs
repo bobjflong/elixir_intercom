@@ -27,7 +27,10 @@ defmodule Intercom.Mixfile do
   #
   # Type "mix help deps" for more examples and options
   defp deps do
-    [{:estree, "~> 2.3"},
-     {:httpoison, "~> 0.8.0"}]
+    [
+      {:estree, "~> 2.3"},
+      {:httpoison, "~> 0.8.0"},
+      {:credo, "~> 0.4", only: [:dev, :test]}
+    ]
   end
 end
