@@ -11,9 +11,9 @@ require Intercom
 
 # Generate the full Intercom snippet
 Intercom.snippet(
-  "<your app id>", # Your app's identifier.
-  "<your secret key>", # Your app's secret key. This enables secure mode https://docs.intercom.io/configure-intercom-for-your-product-or-site/staying-secure/enable-secure-mode-on-your-web-product
-  %{email: "your_data@example.com"} # Key value pairs identifying your user.
+  %{email: "your_data@example.com"}, # Key value pairs identifying your user.
+  app_id: "<your app id>", # Your app's identifier.
+  secret: "<your secret key>" # Your app's secret key. This enables secure mode https://docs.intercom.io/configure-intercom-for-your-product-or-site/staying-secure/enable-secure-mode-on-your-web-product
 )
 ```
 
