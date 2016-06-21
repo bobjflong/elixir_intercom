@@ -33,9 +33,9 @@ defmodule HelloPhoenix.PageController do
 
   defp intercom(conn, _params) do
     assign(conn, :intercom, Intercom.snippet(
-      "<your app id>",
-      "<your secret>",
-      %{email: "bob@foo.com"}
+      %{email: "bob@foo.com"},
+      app_id: "<your app id>",
+      secret: "<your secret>"
     ))
   end
 end
